@@ -1,0 +1,108 @@
+<rss version="2.0"
+  xmlns:access="http://www.bloglines.com/about/specs/fac-1.0"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:ag="http://purl.org/rss/1.0/modules/aggregation/"
+  xmlns:annotate="http://purl.org/rss/1.0/modules/annotate/"
+  xmlns:app="http://www.w3.org/2007/app"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:audio="http://media.tangent.org/rss/1.0/"
+  xmlns:blogChannel="http://backend.userland.com/blogChannelModule"
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:cf="http://www.microsoft.com/schemas/rss/core/2005"
+  xmlns:company="http://purl.org/rss/1.0/modules/company"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:conversationsNetwork="http://conversationsnetwork.org/rssNamespace-1.0/"
+  xmlns:cp="http://my.theinfo.org/changed/1.0/rss/"
+  xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule",
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:email="http://purl.org/rss/1.0/modules/email/"
+  xmlns:ev="http://purl.org/rss/1.0/modules/event/"
+  xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+  xmlns:fh="http://purl.org/syndication/history/1.0"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:georss="http://www.georss.org/georss"
+  xmlns:geourl="http://geourl.org/rss/module/"
+  xmlns:g="http://base.google.com/ns/1.0"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:icbm="http://postneo.com/icbm"
+  xmlns:image="http://purl.org/rss/1.0/modules/image/"
+  xmlns:indexing="urn:atom-extension:indexing"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:kml20="http://earth.google.com/kml/2.0"
+  xmlns:kml21="http://earth.google.com/kml/2.1"
+  xmlns:kml22="http://www.opengis.net/kml/2.2"
+  xmlns:l="http://purl.org/rss/1.0/modules/link/"
+  xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:openid="http://openid.net/xmlns/1.0"
+  xmlns:opensearch10="http://a9.com/-/spec/opensearchrss/1.0/"
+  xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+  xmlns:opml="http://www.opml.org/spec2"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:ref="http://purl.org/rss/1.0/modules/reference/"
+  xmlns:reqv="http://purl.org/rss/1.0/modules/richequiv/"
+  xmlns:rss090="http://my.netscape.com/rdf/simple/0.9/"
+  xmlns:rss091="http://purl.org/rss/1.0/modules/rss091#"
+  xmlns:rss1="http://purl.org/rss/1.0/"
+  xmlns:rss11="http://purl.org/net/rss1.1#"
+  xmlns:search="http://purl.org/rss/1.0/modules/search/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  xmlns:ss="http://purl.org/rss/1.0/modules/servicestatus/"
+  xmlns:str="http://hacks.benhammersley.com/rss/streaming/"
+  xmlns:sub="http://purl.org/rss/1.0/modules/subscription/"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:sx="http://feedsync.org/2007/feedsync"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+  xmlns:thr="http://purl.org/rss/1.0/modules/threading/"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:wiki="http://purl.org/rss/1.0/modules/wiki/"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xrd="xri://$xrd*($v*2.0)"
+  xmlns:xrds="xri://$xrds">
+Now then, which of these will you actually use? The most common ones are dc, content, and admin. For technical reasons, if you use admin, you'll almost certainly end up using rdf too, so declare both.
+
+Here is a relatively sophisticated RSS document that uses these common namespaces:
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<channel>
+<title>My weblog</title>
+<link>http://www.example.com/</link>
+<description>My cute tagline</description>
+
+<dc:language>en-us</dc:language>
+<dc:creator>Me (me@example.com)</dc:creator>
+<dc:rights>Copyright 2002 Me</dc:rights>
+<dc:date>2002-10-18T16:10:15-05:00</dc:date>
+
+<admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=2.5" />
+<admin:errorReportsTo rdf:resource="mailto:me@example.com"/>
+
+<item>
+<title>Take up knitting</title>
+<link>http://www.example.com/archives/000054.html</link>
+<description>Hidden Mozilla preferences. XSLT tips. Transcript of the Eldred case.</description>
+
+<content:encoded><![CDATA[<ul>
+<li><a href="http://www.geocities.com/pratiksolanki/">Hidden Mozilla prefs</a>.</li>
+<li><a href="http://www.perfectxml.com/TipsXSLT.asp">50 XSLT tips</a>. [via <a href="http://simon.incutio.com/">Simon</a>]</li>
+<li><a href="http://www.aaronsw.com/2002/eldredTranscript">Transcript of the Eldred Supreme Court case</a>. Converted to HTML and publicly archived by <a href="http://www.aaronsw.com/weblog/">Aaron</a>.</li>
+</ul>]]></content:encoded>
+
+<dc:subject>Miscellaneous</dc:subject>
+<dc:date>2002-10-18T16:10:15-05:00</dc:date>
+
+</item>

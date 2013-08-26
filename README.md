@@ -1,4 +1,0 @@
-Titulares Paraguay
-=================
-
-Beta
